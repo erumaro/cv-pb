@@ -1,0 +1,90 @@
+#cv{
+    width: 50vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url('../images/skog.jpg');
+}
+
+.cv-header{
+    @include flex-grid-row;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0), #771414);
+    color: $color__white;
+}
+
+.profile-content{
+    @include flex-grid-column(3, 2);
+    @include flex-grid-vertical-row;
+}
+
+.profile-top{
+    @include flex-grid-row;
+}
+
+.profile-pic{
+    @include flex-grid-column(12, 2);
+    
+    img{
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid $color__white;
+    }
+}
+
+.profile-name{
+    @include flex-grid-column(12, 10);
+}
+
+.profile-contact-info{
+    @include flex-grid-column(3);
+    
+    ul{
+        padding: 0;
+    }
+    
+    a{
+        text-decoration: none;
+        color: $color__dark-grey;
+    }
+}
+
+.profile-recommendation{
+    font-family: 'Vollkorn', serif;
+    font-style: italic;
+    font-weight: 400;
+    @include flex-grid-column(1, 1);
+}
+
+.cv-section{
+    @include flex-grid-row;
+}
+
+.cv-content{
+    background: yellow;
+    height: 75vh;
+    @include flex-grid-column(3, 2);
+}
+
+.cv-work-and-education{
+    background: $color__white;
+    height: 75vh;
+    @include flex-grid-column(3, 1);
+    
+    ul{
+        padding: 0;
+        border-left: 2px solid $color__black;
+        margin-left: -20px;
+        margin-bottom: -22px;
+        padding-bottom: 26px;
+        padding-left: 17px;
+    }
+    
+    i{
+        color: blue;
+    }
+}
+
+.cv-footer{
+    height: 5vh;
+    background: $color__black;
+}
