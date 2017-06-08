@@ -21,7 +21,7 @@
 }
 
 .profile-pic{
-    @include flex-grid-column(12, 2);
+    @include flex-grid-column(12, 3);
     
     img{
     overflow: hidden;
@@ -32,7 +32,7 @@
 }
 
 .profile-name{
-    @include flex-grid-column(12, 10);
+    @include flex-grid-column(12, 9);
 }
 
 .profile-contact-info{
@@ -60,23 +60,30 @@
 }
 
 .cv-content{
-    background: yellow;
+    background: $color__white;
     height: 75vh;
     @include flex-grid-column(3, 2);
+    margin-bottom: 0;
+    
+    section{
+        @include flex-grid-vertical-row;
+        justify-content: flex-start;
+        
+        h2, p{
+            @include flex-grid-column(1, 1);
+        }
+    }
 }
 
 .cv-work-and-education{
     background: $color__white;
     height: 75vh;
+    border-left: 5px solid $color__light-grey;
     @include flex-grid-column(3, 1);
+    margin-bottom: 0;
     
     ul{
-        padding: 0;
-        border-left: 2px solid $color__black;
-        margin-left: -20px;
-        margin-bottom: -22px;
-        padding-bottom: 26px;
-        padding-left: 17px;
+
     }
     
     i{
