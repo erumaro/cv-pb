@@ -23,6 +23,11 @@ h2{
 }
 
 h3{
+    @include font-size(1);
+    align-self: center;
+}
+
+h4{
     @include font-size(0.8);
 }
 
